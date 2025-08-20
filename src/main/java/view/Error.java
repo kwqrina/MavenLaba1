@@ -4,10 +4,12 @@
  */
 package view;
 
+import javax.swing.*;
 /**
  *
  * @author ekate
  */
 public class Error {
+    public static void showError(String message) {
     
 }
