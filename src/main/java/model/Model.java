@@ -4,10 +4,38 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ekate
  */
 public class Model {
+    private final List<List<Double>> data;
+    private final List<String> sampleNames;
+    
+    public Model() {
+        this.data = new ArrayList<>();
+        this.sampleNames = new ArrayList<>();
+    }
+    
+    public List<List<Double>> getData() {
+        return data;
+    }
+
+    public List<String> getSampleNames() {
+        return sampleNames;
+    }
+
+    public void clearData() {
+        data.clear();
+        sampleNames.clear();
+    }
+
+    public void addSample(List<Double> sample, String sampleName) {
+        data.add(sample);
+        sampleNames.add(sampleName);
+    }
     
 }
