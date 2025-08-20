@@ -315,3 +315,22 @@ public class AppController {
                 }
             }
         }
+
+        private void setRow(Result result, double[] confidenceInterval, Row row) {
+            row.createCell(0).setCellValue(result.getSampleName());
+            row.createCell(1).setCellValue(result.getGeometricMean());
+            row.createCell(2).setCellValue(result.getMean());
+            row.createCell(3).setCellValue(result.getStdDev());
+            row.createCell(4).setCellValue(result.getRange());
+            row.createCell(5).setCellValue(result.getCount());
+            row.createCell(6).setCellValue(result.getCoefficientOfVariation());
+            row.createCell(7).setCellValue(result.getMin());
+            row.createCell(8).setCellValue(result.getMax());
+            row.createCell(9).setCellValue(result.getVariance());
+            row.createCell(10).setCellValue("[" + confidenceInterval[0] + ", " + confidenceInterval[1] + "]");
+        }
+
+    
+        
+    
+}
