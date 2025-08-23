@@ -29,14 +29,8 @@ public class App extends JFrame {
         exitButton = new JButton("Выход");
         outputArea = new JTextArea();
 
-        //настройка кнопок для правильного отображения цветов
-        configureButton(importButton, Color.YELLOW);
-        configureButton(exportButton, Color.YELLOW);
-        configureButton(calculationButton, Color.GREEN);
-        configureButton(exitButton, Color.RED);
+      
 
-        //устанавливаем цвет текста для лучшей читаемости
-        exitButton.setForeground(Color.WHITE);
         
         JPanel panel = new JPanel();
         panel.add(importButton);

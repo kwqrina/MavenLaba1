@@ -99,7 +99,7 @@ public class AppController {
     }
     
     
-    private boolean[] showCalculationOptionsDialog() {  //Создает диалоговое окно с чекбоксами для 11 статистических показателей
+    private boolean[] showCalculationOptionsDialog() {  
            
             
                 boolean[] selectedOptions = new boolean[11];
