@@ -1,1 +1,7 @@
+model\Model.class
+view\App.class
+model\Statistics.class
+view\Error.class
 com\mycompany\mavenlaba1\Main.class
+controller\AppController.class
+model\Result.class

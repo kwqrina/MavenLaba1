@@ -100,49 +100,14 @@ public class AppController {
     
     
     private boolean[] showCalculationOptionsDialog() {  //Создает диалоговое окно с чекбоксами для 11 статистических показателей
-            String[] options = {
-                "Среднее геометрическое",
-                "Среднее арифметическое",
-                "Стандартное отклонение",
-                "Размах",
-                "Количество элементов",
-                "Коэффициент вариации",
-                "Минимум",
-                "Максимум",
-                "Дисперсия",
-                "Доверительный интервал",
-                "Ковариация"
-            };
-
-            JCheckBox[] checkBoxes = new JCheckBox[options.length];
-            for (int i = 0; i < options.length; i++) {
-                checkBoxes[i] = new JCheckBox(options[i]);
-                checkBoxes[i].setSelected(true);
-            }
-
-            JPanel panel = new JPanel();
-            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-            for (JCheckBox checkBox : checkBoxes) {
-                panel.add(checkBox);
-            }
-
-            int result = JOptionPane.showConfirmDialog(
-                view,
-                panel,
-                "Выберите пункты для расчета",
-                JOptionPane.OK_CANCEL_OPTION,
-                JOptionPane.PLAIN_MESSAGE
-            );
-
-            if (result == JOptionPane.OK_OPTION) {
-                boolean[] selectedOptions = new boolean[options.length];
-                for (int i = 0; i < checkBoxes.length; i++) {
-                    selectedOptions[i] = checkBoxes[i].isSelected();
+           
+            
+                boolean[] selectedOptions = new boolean[11];
+                for (int i = 0; i < 11; i++) {
+                    selectedOptions[i] = true;
                 }
                 return selectedOptions;
-            } else {
-                return null;
-        }
+           
     }
     
     private void calculationData() {

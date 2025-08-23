@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.lab11;
+package com.mycompany.mavenlaba1;
 
 import controller.AppController;
 import model.Model;
