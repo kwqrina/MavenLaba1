@@ -19,7 +19,7 @@ public class App extends JFrame {
     private final JTextArea outputArea;
 
     public App() {        
-        setTitle("Программа расчета статичстических данных");
+        setTitle("Программа для расчета статистических показателей");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -30,26 +30,17 @@ public class App extends JFrame {
         outputArea = new JTextArea();
 
       
-
-        
         JPanel panel = new JPanel();
         panel.add(importButton);
         panel.add(calculationButton);
         panel.add(exportButton);
         panel.add(exitButton);
-        panel.add(new JLabel("Введите надежность для расчета доверительного интервала:"));
+        panel.add(new JLabel("Введите уровень надежности для расчета доверительного интервала:"));
 
         add(panel, BorderLayout.NORTH);
         add(new JScrollPane(outputArea), BorderLayout.CENTER);
 
         setVisible(true);
-    }
-
-    private void configureButton(JButton button, Color color) {
-        button.setBackground(color);
-        button.setOpaque(true);
-        button.setBorderPainted(false);
-        button.setContentAreaFilled(true);
     }
 
     public JButton getImportButton() {return importButton;}
