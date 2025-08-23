@@ -43,7 +43,7 @@ public class AppController {
         view.getExitButton().addActionListener(e -> System.exit(0));
     }
     
-    private void importData() {                                   //Импорт данных из Excel-файла
+    private void importData() {                                   //импорт данных из Excel-файла
         JFileChooser fileChooser = new JFileChooser();
         int option = fileChooser.showOpenDialog(view);
         
@@ -86,7 +86,7 @@ public class AppController {
                             model.getData().get(i).add(value);
                         }
                     }
-                    view.getOutputArea().setText("Данные успешно импортированы");
+                    view.getOutputArea().setText("Данные были успешно импортированы");
                 }
             } catch (POIXMLException | NotOfficeXmlFileException e) {
                 Error.showError("Файл не является корректным Excel-документом (.xlsx)");
@@ -134,10 +134,10 @@ public class AppController {
             try {
                 confidenceLevel = Double.parseDouble(input);
                 if (confidenceLevel <= 0 || confidenceLevel >= 1) {
-                    throw new IllegalArgumentException("Уровень доверия должен быть от 0 до 1.");
+                    throw new IllegalArgumentException("Уровень доверия должен быть от 0 до 1 не включительно.");
                 }
             } catch (NumberFormatException e) {
-                Error.showError("Некорректный уровень доверия. Введите число между 0 и 1.");
+                Error.showError("Некорректный уровень доверия. Введите число от 0 до 1 не включительно.");
                 return;
             } catch (IllegalArgumentException e) {
                 Error.showError(e.getMessage());
